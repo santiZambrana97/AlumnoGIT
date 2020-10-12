@@ -1,20 +1,20 @@
-package Entities;
+package com.demo.entities;
 
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.envers.Audited;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-
 @Entity
 @Table(name = "alumno")
-@Audited
-@Builder
 @NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@Audited
 
-public class Alumno {
+public class Alumno extends Base{
 
     @Column(name = "legajo")
     private int legajo;
